@@ -1,4 +1,4 @@
-I put this project out to try Microsoft Moles.  Its a dependency injection tool.  It will instrument DLLs so you can inject a test double for just about anything.  This includes static methods, extension methods, all those hard-to-isoalte dependencies.
+I put this project out to try Microsoft Moles.  Its a dependency injection tool.  It will instrument DLLs so you can inject a test double for just about anything.  This includes static methods, extension methods, all those hard-to-isolate dependencies.
 
 Moles Documentation: http://research.microsoft.com/en-us/projects/pex/documentation.aspx
 Moles download: http://research.microsoft.com/en-us/projects/pex/downloads.aspx
