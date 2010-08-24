@@ -31,6 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Moles.Framework, Version=0.93.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="mscorlib.Behaviors">
+      <HintPath>..\..\Program Files (x86)\Microsoft Moles\MolesAssemblies\mscorlib\4.0.0.0__B77A5C561934E089\mscorlib.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib.Moles">
+      <HintPath>..\..\Program Files (x86)\Microsoft Moles\MolesAssemblies\mscorlib\4.0.0.0__B77A5C561934E089\mscorlib.Moles.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\nunit.framework.dll</HintPath>
@@ -45,7 +54,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FooTest.cs" />
+    <Compile Include="mscorlib.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>mscorlib.moles</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mscorlib.moles">
+      <Generator>MolesGenerator</Generator>
+      <LastGenOutput>mscorlib.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MoleSample\MoleSample.csproj">
+      <Project>{6715ACA8-5A76-45E1-84FB-057CAD3BBD2B}</Project>
+      <Name>MoleSample</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
